@@ -1,0 +1,15 @@
+Name: user.rpc
+ListenOn: 0.0.0.0:8080
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: user.rpc
+DataSource: root:my-secret-pw@tcp(127.0.0.1:3306)/beyond_user?parseTime=true
+CacheRedis:
+  - Host: 127.0.0.1:6379
+    Pass: admin
+    Type: node
+BizRedis:
+  Host: 127.0.0.1:6379
+  Pass: admin
+  Type: node
