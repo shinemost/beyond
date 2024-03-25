@@ -177,8 +177,8 @@ func gRPCStatusFromXCode(code XCode) (*status.Status, error) {
 		}
 	}
 
-	stas := status.New(codes.Unknown, strconv.Itoa(sts.Code()))
-	return stas.WithDetails(sts.Proto())
+	stats := status.New(codes.Unknown, strconv.Itoa(sts.Code()))
+	return stats.WithDetails(sts.Proto())
 }
 
 func GrpcStatusToXCode(gstatus *status.Status) XCode {
