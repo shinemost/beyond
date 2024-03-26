@@ -2,19 +2,19 @@ Name: article-api
 Host: 0.0.0.0
 Port: 8100
 Auth:
-  AccessSecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  AccessSecret: AccessSecret
   AccessExpire: 604800
-  RefreshSecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  RefreshSecret: RefreshSecret
   RefreshExpire: 2592000
   RefreshAfter: 604800
 Oss:
-  Endpoint: xxx
-  AccessKeyId: xxx
-  AccessKeySecret: xxx
-  BucketName: xxx
+  Endpoint: xxxxx
+  AccessKeyId: xxxxx
+  AccessKeySecret: xxxxx
+  BucketName: xxxxxx
 ArticleRPC:
   Etcd:
     Hosts:
       - 127.0.0.1:2379
     Key: article.rpc
-  NonBlock: true  
+  NonBlock: true

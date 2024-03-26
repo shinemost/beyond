@@ -3,6 +3,8 @@ package logic
 import (
 	"context"
 	"github.com/shinemost/beyond/application/article/rpc/internal/model"
+	"github.com/shinemost/beyond/application/article/rpc/internal/types"
+	"time"
 
 	"github.com/shinemost/beyond/application/article/rpc/internal/svc"
 	"github.com/shinemost/beyond/application/article/rpc/pb"
@@ -31,6 +33,10 @@ func (l *PublishLogic) Publish(in *pb.PublishRequest) (*pb.PublishResponse, erro
 		Content:     in.Content,
 		Description: in.Description,
 		Cover:       in.Cover,
+		Status:      types.ArticleStatusPending,
+		PublishTime: time.Now(),
+		CreateTime:  time.Now(),
+		UpdateTime:  time.Now(),
 	})
 	if err != nil {
 		l.Logger.Errorf("Publish Insert req: %v error: %v", in, err)
